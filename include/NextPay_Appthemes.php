@@ -52,8 +52,8 @@ function nextpay_app_gateway_load() {
 		
 		public function form() {
 			$title   	  = __( 'درگاه پرداخت نکست پی', NEXTPAYAPPT );
-			$description  = "<a target='_blank' href='http://webforest.ir/'><img border='0' style='float:right; margin-left:15px' src='".plugin_dir_url( __FILE__ )."assets/NextPay.png'></a><br/>";
-			$description .= sprintf(__( '<br/><a target="_blank" style="text-decoration:none;" href="%s">وب سایت پشتیبانی درگاه پرداخت &#187;</a>', NEXTPAYAPPT ), "http://webforest.ir") . "<br/><br/><br/><br/>";
+			$description  = "<a target='_blank' href='https://nextpay.ir/'><img border='0' style='float:right; margin-left:15px' src='".plugin_dir_url( __FILE__ )."assets/NextPay.png'></a><br/>";
+			$description .= sprintf(__( '<br/><a target="_blank" style="text-decoration:none;" href="%s">وب سایت پشتیبانی درگاه پرداخت &#187;</a>', NEXTPAYAPPT ), "https://nextpay.ir/") . "<br/><br/><br/><br/>";
 			$description .= '<strong>'.__( 'تنظیمات درگاه نکست پی', NEXTPAYAPPT ) . '</strong>';
 			$fields = array(
 					array(

@@ -142,7 +142,7 @@ class Nextpay_Payment
             case Type_Verify::NuSoap:
                 try
                 {
-                    include_once ("nusoap/nusoap.php");
+                    include_once ("include/nusoap/nusoap.php");
 
                     $client = new nusoap_client($this->server_soap,'wsdl');
 
@@ -369,7 +369,7 @@ class Nextpay_Payment
             case Type_Verify::NuSoap:
                 try
                 {
-                    include_once ("nusoap/nusoap.php");
+                    include_once ("include/nusoap/nusoap.php");
 
                     $client = new nusoap_client($this->server_soap,'wsdl');
 
@@ -505,9 +505,12 @@ class Nextpay_Payment
 	    -50 => "account not found",
 	    -51 => "user not found"
         );
-
-        echo "<h2>code error : {$error_code}</h2>";
-        echo "<h3>description error : {$error_array[$error_code]}</h3>";
+        
+        if (array_key_exists($error_code, $error_array)) {
+		return $error_array[$error_code];
+        } else {
+		return "error code : $error_code";
+	}
     }
 
     /**
